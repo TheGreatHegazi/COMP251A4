@@ -42,17 +42,17 @@ public class Multiply {
 		} else {
 			
 			int m = (int) Math.ceil(size / 2);
-			int a = (int) Math.floor(x / Math.pow(2, m));
-			int c = (int) Math.floor(y / Math.pow(2, m));
-			int b = (int) (x % Math.pow(2, m));
-			int d = (int) (y % Math.pow(2, m));
+			int a = (int) Math.floor(x / (int )Math.pow(2, m));
+			int c = (int) Math.floor(y / (int)Math.pow(2, m));
+			int b = (int) (x % (int)Math.pow(2, m));
+			int d = (int) (y % (int)Math.pow(2, m));
 			
-			int [] e  = karatsuba(m, a,c);
+			int [] e  = karatsuba(m, a,c); 
 			int [] f = karatsuba ( m , b , d);
 			int [] g = karatsuba ( m,a-b, c-d);
 			
-			answer[0] = ((int) Math.pow(2, 2*m) * e[0]) + (int) (Math.pow(2, m)) * ( e[0] +f[0] - g[0])+ f[0];
-			answer [1] += 5* size + e[1]+g[1]+f[1]; 
+			answer[0] = (int) Math.pow(2, 2*m) * e[0] + (int) (Math.pow(2, m)) * ( e[0] +f[0] - g[0])+ f[0];
+			answer [1] += 6 * size + e[1] + g[1] + f[1]; 
 			
 			return answer;
 
