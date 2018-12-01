@@ -17,7 +17,7 @@ public class Multiply {
 			answer[1]++;
 			return answer;
 		} else {
-			int m = (int) Math.ceil(size / 2);
+			int m = (int) Math.ceil(size / 2.0);
 			int a = (int) Math.floor(x / Math.pow(2, m));
 			int c = (int) Math.floor(y / Math.pow(2, m));
 			int b = (int) (x % Math.pow(2, m));
@@ -41,7 +41,7 @@ public class Multiply {
 			return answer;
 		} else {
 			
-			int m = (int) Math.ceil(size / 2);
+			int m = (int) Math.ceil(size / 2.0);
 			int a = (int) Math.floor(x / (int )Math.pow(2, m));
 			int c = (int) Math.floor(y / (int)Math.pow(2, m));
 			int b = (int) (x % (int)Math.pow(2, m));
